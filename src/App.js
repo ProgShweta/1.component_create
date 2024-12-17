@@ -1,25 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+// import React from 'react'
+// import User from './User'
+// import Login from './Login'
 
-function App() {
+// const App = () => {
+//   // function Apple(){
+//   //   return(
+//   //     <p>Apple this is</p>
+//   //   )
+//   // }
+
+//   return (
+//     <div>
+//       <User/>
+//       <Login/>
+//       {/* <Apple/> */}
+//     </div>
+//   )
+// }
+
+// export default App
+
+////=======================================State=========================================================
+
+import React, { useState } from 'react'
+const App = () => {
+  const [data, setData] = useState("shweta")
+function updateData(){
+  setData("Chhoti")
+}
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+       <h1>{data}</h1>
+       <button onClick={updateData}>Click me</button>
+    </>
+  )
 }
 
-export default App;
+export default App
+
+
